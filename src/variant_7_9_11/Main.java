@@ -1,4 +1,4 @@
-package variant_7_9;
+package variant_7_9_11;
 
 public class Main {
     public static void main(String[] args) {
@@ -25,5 +25,10 @@ public class Main {
 
         a.dublicate();
         System.out.println(a);
+        a.firstLast();
+        System.out.println(a);
+        LinkedIntList b = new LinkedIntList();
+        b.add(123);
+        System.out.println(b);
     }
 }

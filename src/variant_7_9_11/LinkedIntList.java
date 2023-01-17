@@ -1,9 +1,9 @@
-package variant_7_9;
+package variant_7_9_11;
 
 public class LinkedIntList {
     private ListNode front = null;
 
-    public void add(int a){
+    public void add(int a) {
         ListNode x = new ListNode(a);
         x.next = front;
         front = x;
@@ -27,6 +27,19 @@ public class LinkedIntList {
             tmp = tmp.next;
             prew = prew.next;
         }
+    }
+
+    public void firstLast(){
+        ListNode tmp = front;
+        if (front == null || front.next == null){
+            return;
+        }
+        while (tmp.next != null){
+            tmp = tmp.next;
+        }
+        tmp.next = front;
+        front = front.next;
+        tmp.next.next = null;
     }
 
     public void removeAll(LinkedIntList b) {
@@ -61,12 +74,13 @@ public class LinkedIntList {
             tmp = tmp.next;
         }
     }
+
     @Override
     public String toString() {
         StringBuilder s = new StringBuilder();
         s.append(" ");
         ListNode tmp = front;
-        while (tmp != null){
+        while (tmp != null) {
             s.append(tmp.data);
             s.append(" ");
             tmp = tmp.next;
