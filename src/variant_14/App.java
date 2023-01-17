@@ -11,10 +11,13 @@ public class App {
         a.push(1);
         a.push(4);
         a.push(3);
+
         b.push(1);
         b.push(1);
         b.push(3);
         b.push(4);
+        System.out.println(a);
+        System.out.println(b);
         System.out.println(equals(a, b));
     }
     public static boolean equals(Stack<Integer> a, Stack<Integer> b) {
@@ -34,6 +37,8 @@ public class App {
             b.push(tmp.peek());
             tmp.pop();
         }
+        System.out.println(a);
+        System.out.println(b);
         return fl;
     }
 }
