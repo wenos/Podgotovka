@@ -1,17 +1,18 @@
 package variant_27;
 
+import java.util.ArrayList;
+
 public class MyList {
 
     int[] list = new int[1];
     int size = 0;
 
     public void append(int num){
-        if (size < list.length) {
-            list[size++] = num;
-        } else {
+
+        if (size == list.length) {
             list = newList(list);
-            list[size++] = num
         }
+        list[size++] = num;
     }
 
     public int[] newList(int[] l){
@@ -20,5 +21,10 @@ public class MyList {
         return list1;
     }
 
+    public void popLeft(){
+        for (int i = 0; i < size; ++i){
+
+        }
+    }
 
 }

@@ -1,8 +1,8 @@
 package variant_23;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure{
     @Override
-    public void use(){
+    public void use() {
         System.out.println("Прямоугольник создан");
     }
 }
